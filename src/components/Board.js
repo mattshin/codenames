@@ -1,21 +1,10 @@
 import React from 'react';
 import Card from './Card';
 
-var _ = require('lodash');
-
 var game = require('../game/game.js');
 const colorHexMap = game.colorMap;
 
-var boardState = {};
-var wordColorMap = _.zip(game.getWords(), game.getColors());
-
-wordColorMap.forEach( function(pair){
-  var word = pair[0];
-  var color = pair[1];
-  boardState[word] = {};
-  boardState[word]['revealed'] = false;
-  boardState[word]['color'] = color;
-});
+var boardState = game.newGame();
 
 class Board extends React.Component {
   constructor() {
