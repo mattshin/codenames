@@ -24,8 +24,6 @@ class Board extends React.Component {
 
   render() {
     var words = Object.keys(this.state);
-
-    const status = 'Next player: X';
     var rows = [];
     for(var i = 0; i < 25; i += 5){
       rows.push(this.renderRow(i, words.slice(i, i+5)));
