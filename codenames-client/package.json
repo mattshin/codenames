@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.15.3",
+    "express-generator": "^4.15.0",
     "json-loader": "^0.5.4",
     "lodash": "^4.17.4",
     "react": "^15.6.0",
