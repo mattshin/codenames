@@ -6,8 +6,8 @@ class Card extends React.Component {
 		super(props);
 		this.state = {
 			onClick: this.revealCard(this.props.revealColor, this),
-			revealed: false,
-			color: unrevealedColor 
+			revealed: this.props.revealed,
+			color: this.props.revealed ? this.props.revealColor : unrevealedColor 
 		};
 		this.didMount = false;
 	}

@@ -20,7 +20,7 @@ ol, ul {
 .card {
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 1em;
   font-weight: bold;
   line-height: 34px;
   height: 60px;
@@ -45,14 +45,22 @@ ol, ul {
 
 .game {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
-.game-info {
-  margin-left: 20px;
-}
-
-.newgame {
+.new-game-button {
+  border: 1px solid #999;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 60px;
+  margin-right: 5%;
+  margin-top: 10px;
+  padding: 0;
+  text-align: center;
   width: 90%;
-  margin-left:5%;
+  margin-left: 5%;
+  background-color: #F0F0F0;
 }
+
+
