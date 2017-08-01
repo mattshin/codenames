@@ -1,4 +1,5 @@
 import React from 'react';
+import Async from 'react-promise';
 import Card from './Card';
 
 class Board extends React.Component {
@@ -7,11 +8,13 @@ class Board extends React.Component {
     this.state = this.props.boardState;
   }
   renderCard(index, word, color) {
-    return <Card key={index} word={word} revealColor={this.state[word].color} revealed={false}/>;
+    return <Async key={index} promise={this.state} then={(state) => 
+      <Card key={index} word={word} revealColor={state[word].color} revealed={false}/>}
+      />;
   };
 
   renderRow(index, words) {
-    var cards = []
+    var cards = [];
     words.forEach( function(word){
         cards.push(this.renderCard(index++, word, this.state[word]))
     }.bind(this));
@@ -23,16 +26,19 @@ class Board extends React.Component {
   }
 
   render() {
-    var words = Object.keys(this.state);
-    var rows = [];
-    for(var i = 0; i < 25; i += 5){
-      rows.push(this.renderRow(i, words.slice(i, i+5)));
-    }
-    return (
-      <div>
-        {rows}
-      </div>
-    );
+    var board = this.state.then(function (state){
+      var words = Object.keys(state);
+      var rows = [];
+      for(var i = 0; i < 25; i += 5){
+        rows.push(this.renderRow(i, words.slice(i, i+5)));
+      }
+      return (
+        <div>
+          {rows}
+        </div>
+      );
+    }.bind(this));
+    return <Async promise={board} then={(rows) => (rows)}/>;
   }
 }
 

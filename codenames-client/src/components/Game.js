@@ -3,15 +3,11 @@ import Board from './Board';
 import MasterBoard from './MasterBoard';
 import { Route } from 'react-router-dom';
 
-
-//var game = require('../game/game.js');
-
 class GameComponent extends React.Component {
   constructor() {
     super();
-    fetch('/boardState')
-      .then(res => res.json())
-      .then(boardState => this.state = boardState);
+    this.state = fetch('/boardState')
+      .then(res => res.json());
   }
 
   render() {
