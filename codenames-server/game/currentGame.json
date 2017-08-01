@@ -1,8 +1,1 @@
-{
-    "words": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y"],
-    "colors": [1, 1, 1, 1, 1, 
-            1, 1, 1, 1, 2,
-            2, 2, 2, 2, 2,
-            2, 2, 3, 0, 0,
-            0, 0, 0, 0, 0]
-}
+{"Water":{"revealed":false,"color":"#70c0ff"},"Rome":{"revealed":false,"color":"#ff7070"},"Fall":{"revealed":false,"color":"#e0e080"},"Honey":{"revealed":false,"color":"#e0e080"},"Duck":{"revealed":false,"color":"#e0e080"},"Ray":{"revealed":false,"color":"#555555"},"Ring":{"revealed":false,"color":"#e0e080"},"Ground":{"revealed":false,"color":"#70c0ff"},"Lawyer":{"revealed":false,"color":"#e0e080"},"Microscope":{"revealed":false,"color":"#ff7070"},"Ketchup":{"revealed":false,"color":"#ff7070"},"Pound":{"revealed":false,"color":"#ff7070"},"Alps":{"revealed":false,"color":"#70c0ff"},"Shadow":{"revealed":false,"color":"#70c0ff"},"Spine":{"revealed":false,"color":"#70c0ff"},"File":{"revealed":false,"color":"#ff7070"},"Table":{"revealed":false,"color":"#70c0ff"},"Wave":{"revealed":false,"color":"#ff7070"},"Laser":{"revealed":false,"color":"#70c0ff"},"Robot":{"revealed":false,"color":"#e0e080"},"Stock":{"revealed":false,"color":"#e0e080"},"Brush":{"revealed":false,"color":"#ff7070"},"Ghost":{"revealed":false,"color":"#70c0ff"},"Capital":{"revealed":false,"color":"#70c0ff"},"Server":{"revealed":false,"color":"#ff7070"}}

@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var fs = require('fs');
 const gameWordBank = require('./words.json');
 const colors = [
   1, 1, 1, 1, 1, 
@@ -37,7 +38,11 @@ function newGame(){
     boardState[word]['color'] = colorMap[color];
   });
 
-  
+  fs.writeFile('./game/currentGame.json', JSON.stringify(boardState), 'utf8', function (err){
+    if (err){
+      throw err;
+    }
+  });
   return boardState;
 }
 
