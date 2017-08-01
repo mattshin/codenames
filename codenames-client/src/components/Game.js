@@ -10,6 +10,14 @@ class GameComponent extends React.Component {
       .then(res => res.json());
   }
 
+  startNewGame(gameState) {
+    return () => {
+      var newState = fetch('/newGame')
+      .then(res => res.json());
+      window.location.reload(newState);
+    }
+  };
+
   render() {
     return (
       <div>
@@ -23,7 +31,7 @@ class GameComponent extends React.Component {
             </div>
           </div>
           <div className="new-game">
-            <button className="new-game-button" onClick={function(){alert('New Game');}}>
+            <button className="new-game-button" onClick={this.startNewGame(this.state)} >
               Start a New Game
             </button>
           </div>
