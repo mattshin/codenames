@@ -19,7 +19,7 @@ function getColors(){
 }
 
 var colorMap = { 
-  0: "#e0e080",  // Yellow
+  0: "#ffffbb",  // Yellow
   1: "#70c0ff",  // Blue
   2: "#ff7070",  // Red
   3: "#555555"   // Black
