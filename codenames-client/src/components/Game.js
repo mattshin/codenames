@@ -3,16 +3,18 @@ import Board from './Board';
 import MasterBoard from './MasterBoard';
 import { Route } from 'react-router-dom';
 
+const API_URL = 'https://codenames.mattshin.dev/api'
+
 class GameComponent extends React.Component {
   constructor() {
     super();
-    this.state = fetch('/boardState')
+    this.state = fetch(`${API_URL}/boardState`)
       .then(res => res.json());
   }
 
   startNewGame(gameState) {
     return () => {
-      var newState = fetch('/newGame')
+      var newState = fetch(`${API_URL}/newGame`)
       .then(res => res.json());
       window.location.reload(newState);
     }
